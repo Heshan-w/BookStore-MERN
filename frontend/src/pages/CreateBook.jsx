@@ -74,7 +74,7 @@ const CreateBook = () => {
             className="border-2 border-gray-500 w-full px-4 py-2"
           />
         </div>
-        <button onClick={handleSaveBook} className="p-2 bg-sky-800 m-8 rounded-xl">
+        <button onClick={handleSaveBook} className="p-2 bg-sky-800 m-8 rounded-xl cursor-pointer">
           <h1 className="text-2xl">Add book</h1>
         </button>
       </div>
