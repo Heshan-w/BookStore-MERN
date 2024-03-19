@@ -40,9 +40,9 @@ const CreateBook = () => {
         <h1 className="text-3xl my-3">Add a book</h1>
       </div>
       {loading ? <Spinner /> : ""}
-      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
+      <div className="flex flex-col border-4 border-sky-800 rounded-xl w-[600px] p-4 mx-auto">
         <div className="my-4">
-          <label className="text-xl text-gray-500 mr-4">Title : </label>
+          <label className="text-xl mr-4">Title : </label>
           <input
             type="text"
             value={title}
@@ -52,9 +52,8 @@ const CreateBook = () => {
             className="border-2 border-gray-500 w-full px-4 py-2"
           />
         </div>
-
         <div className="my-4">
-          <label className="text-xl text-gray-500 mr-4">Author : </label>
+          <label className="text-xl mr-4">Author : </label>
           <input
             type="text"
             value={author}
@@ -64,9 +63,8 @@ const CreateBook = () => {
             className="border-2 border-gray-500 w-full px-4 py-2"
           />
         </div>
-
         <div className="my-4">
-          <label className="text-xl text-gray-500 mr-4">Year published :</label>
+          <label className="text-xl mr-4">Year published :</label>
           <input
             type="text"
             value={publishYear}
@@ -76,9 +74,8 @@ const CreateBook = () => {
             className="border-2 border-gray-500 w-full px-4 py-2"
           />
         </div>
-
-        <button onClick={handleSaveBook} className="p-2 bg-sky-300 m-8">
-          Add book
+        <button onClick={handleSaveBook} className="p-2 bg-sky-800 m-8 rounded-xl">
+          <h1 className="text-2xl">Add book</h1>
         </button>
       </div>
     </div>
