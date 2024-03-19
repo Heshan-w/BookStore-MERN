@@ -38,15 +38,15 @@ const Home = () => {
         <table className="w-full border-separate border-spacing-2">
           <thead>
             <tr>
-              <th className="border border-slate-600 rounded-md">No.</th>
-              <th className="border border-slate-600 rounded-md">Title</th>
-              <th className="border border-slate-600 rounded-md max-md:hidden">
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">No.</th>
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">Title</th>
+              <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-white">
                 Author
               </th>
-              <th className="border border-slate-600 rounded-md max-md:hidden">
+              <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-white">
                 Publish Year
               </th>
-              <th className="border border-slate-600 rounded-md">Operations</th>
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">Operations</th>
             </tr>
           </thead>
           <tbody>
