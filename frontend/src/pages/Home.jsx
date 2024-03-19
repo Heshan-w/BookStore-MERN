@@ -26,11 +26,14 @@ const Home = () => {
 
   return (
     <div className="p-4">
-      <div className="flex justify-center items-center">
-        <h1 className="text-3xl my-8">Books List</h1>
-        <Link to={"/books/create"}>
-          <MdOutlineAddBox className="text-sky-800 text-4xl" />
-        </Link>
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="text-5xl my-5">Bookshelf</h1>
+        <div className="flex flex-col justify-center items-center mb-5">
+          <Link to={"/books/create"}>
+            <MdOutlineAddBox className="text-sky-800 text-4xl" />
+          </Link>
+          <h1 className="text-xl">Add a book</h1>
+        </div>
       </div>
       {loading ? (
         <Spinner />
@@ -38,15 +41,21 @@ const Home = () => {
         <table className="w-full border-separate border-spacing-2">
           <thead>
             <tr>
-              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">No.</th>
-              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">Title</th>
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">
+                No.
+              </th>
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">
+                Title
+              </th>
               <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-white">
                 Author
               </th>
               <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-white">
                 Publish Year
               </th>
-              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">Operations</th>
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">
+                Operations
+              </th>
             </tr>
           </thead>
           <tbody>
