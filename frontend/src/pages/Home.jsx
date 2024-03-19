@@ -41,19 +41,19 @@ const Home = () => {
         <table className="w-full border-separate border-spacing-2">
           <thead>
             <tr>
-              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-gray-400">
                 No.
               </th>
-              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-gray-400">
                 Title
               </th>
-              <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-white">
+              <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-gray-400">
                 Author
               </th>
-              <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-white">
+              <th className="border border-slate-600 rounded-md max-md:hidden bg-slate-600 text-gray-400">
                 Publish Year
               </th>
-              <th className="border border-slate-600 rounded-md bg-slate-600 text-white">
+              <th className="border border-slate-600 rounded-md bg-slate-600 text-gray-400">
                 Operations
               </th>
             </tr>
@@ -81,7 +81,7 @@ const Home = () => {
                       </Link>
 
                       <Link to={`/books/edit/${book._id}`}>
-                        <AiOutlineEdit className="text-2xl text-yellow-600" />
+                        <AiOutlineEdit className="text-2xl text-yellow-400" />
                       </Link>
 
                       <Link to={`/books/delete/${book._id}`}>
