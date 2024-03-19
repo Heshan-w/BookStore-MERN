@@ -7,13 +7,18 @@ import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 
 const Home = () => {
+  // books is a state variable that will store the list of books.
   const [books, setBooks] = useState([]);
+  // loading is a state variable that will be used to show a loading spinner when the books are being fetched from the server.
   const [loading, setLoading] = useState(false);
 
+  // The useEffect hook is used to fetch the list of books from the server when the component is first rendered.
   useEffect(() => {
     setLoading(true);
+    // Send a GET request to the server to fetch the list of books.
     axios
       .get("http://localhost:5555/books")
+      // The response from the server is an object with a data property that contains the list of books.
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
@@ -35,6 +40,7 @@ const Home = () => {
           <h1 className="text-xl">Add a book</h1>
         </div>
       </div>
+      {/* if loading is not true, meaning the data has been fetched, a table will be displayed with the list of books. */}
       {loading ? (
         <Spinner />
       ) : (
@@ -59,10 +65,13 @@ const Home = () => {
             </tr>
           </thead>
           <tbody>
+            {/* The books state variable is mapped to create a table row for each book. */}
+            {/* each object in the books arrya has the properties _id, title, author, and publishYear. */}
             {books.map((book, index) => {
               return (
                 <tr key={book._id} className="h-8">
                   <td className="border border-slate-600 rounded-md text-center">
+                    {/* The index is used to display the number of the book in the list. */}
                     {index + 1}
                   </td>
                   <td className="border border-slate-600 rounded-md text-center">
