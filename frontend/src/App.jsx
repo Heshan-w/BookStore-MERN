@@ -8,6 +8,7 @@ import ShowBook from "./pages/ShowBook";
 
 const App = () => {
   return (
+    <div className="bg-slate-400 h-screen">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/books/create" element={<CreateBook />} />
@@ -15,6 +16,7 @@ const App = () => {
       <Route path="/books/delete/:id" element={<DeleteBook />} />
       <Route path="/books/details/:id" element={<ShowBook />} />
     </Routes>
+    </div>
   );
 };
 
